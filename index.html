@@ -1,30 +1,43 @@
 <!doctype html>
-<html>
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
+		
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<!--Referencias de Boostrap CSS---------------->
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 		
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
 		<!--Referencia a estilos CSS-->
-		<link href="/css/estilos.css" rel="stylesheet">
+		<link href="./css/estilos.css" rel="stylesheet">
 		<!--Referencia al archivo JS para activar el ServiceWorker-->
-		<script src="/js/app.js"></script>
+		
+		<script src="./js/app.js"></script>
+		<script src="./js/funciones.js"></script>
+		<script src="./js/jquery.js"></script>
+    	<script src="./js/bootstrap.min.js"></script>
 		<!--Icono del Sitio-->
-		<link rel="shortcut icon" href="/images/favicon.png">
+		<link rel="shortcut icon" href="./images/favicon.png">
 		<!--Referencia al archivo manifest.json-->
-		<link rel="manifest" href="/manifest.json">
+		<link rel="manifest" href="./manifest.json">
 		<!--Titulo de la pagina.-->	
 		<title>TiendaCell</title>
+
+		<script>
+			Notification.requestPermission().then(function(result) {
+  			console.log(result);
+			});
+		</script>
+			
 	</head>
 <!--Iinicia el cuerpo de la pagina---------->
 <body>
+	
     <!--Barra de navegacion del Menu principal de la pagina-inicio-productos-nosogros-contactenos-->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
 		<a class="navbar-brand">
-			<img src="images/logo1.jpg" width="40" height="40" class="d-inline-block align-top" alt=""> TiendaCell
+			<img src="./images/logo1.jpg" width="40" height="40" class="d-inline-block align-top" alt=""> TiendaCell
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -32,7 +45,7 @@
 	    <div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="/index.html">Inicio<span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="./index.html">Inicio<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Productos</a>
@@ -54,19 +67,20 @@
 			<div class="float:left;">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="/carrito.html">Mis Compras</a>
+						<a class="nav-link" href="./carrito.html">Mis Compras</a>
 					</li>
 					<li>
-						<img src="images/carrito.png" width="40" height="40" class="d-inline-block align-top" alt="">
+						<img src="./images/carrito.png" width="40" height="40" class="d-inline-block align-top" alt="">
 					</li>
 				</ul>	
 			</div>
 			<div>
-				<a href="/registro.html">
+				<a href="./registro.html">
 					<input type="button" value="Registrarse" style="float: right;">
 				</a>
 				
 			</div>
+			
 	  	</div>
 	</nav>
 
@@ -80,22 +94,22 @@
 	  <!--Imagenes en el carrusel------>
 	  <div class="carousel-inner">
 		<div class="carousel-item active imgnormalizada">
-		  <img class="d-block w-100" src="images/banner1.jpg" alt="">
+			<img class="d-block w-100" src="./images/banner1.jpg" alt="">
 		</div>
 		<div class="carousel-item imgnormalizada">
-		  <img class="d-block w-100" src="images/banner2.jpg" alt="">
+			<img class="d-block w-100" src="./images/banner2.jpg" alt="">
 		</div>
 		<div class="carousel-item imgnormalizada">
-		  <img class="d-block w-100" src="images/banner3.jpg" alt="">
+			<img class="d-block w-100" src="./images/banner3.jpg" alt="">
 		</div>
 		<div class="carousel-item imgnormalizada">
-			<img class="d-block w-100" src="images/banner4.jpg" alt="">
-		  </div>
+			<img class="d-block w-100" src="./images/banner4.jpg" alt="">
+		</div>
 	  </div>
 	  <!--Comportamiento de los botones indicadores de los lados de las imagenes en el carrusel-->
 	  <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Anterios</span>
+		<span class="sr-only">Anterior</span>
 	  </a>
 	  <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
 		<span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -109,52 +123,56 @@
     	<div class="row text-center slideanim" style="margin-bottom: 30px; ">
       		<div class="col-sm-6 col-md-6 col-lg-3" >
       		 	<div class="brightness">
-	       			<img src="images/moto.jpg" alt="" width="70%" height="300" class="img-responsive fit-image">
+	       			<img src="./images/moto.jpg" alt="" width="70%" height="300" class="img-responsive fit-image">
 				</div>
       		</div>
 			<div style="text-align: left;">
 				<p>Motorola</p>
 				<p>Moto G20 64 GB azul cielo 4 GB RAM</p>
 				<p>$3867 pesos</p>
+				<button onclick="agregaCarrito()">Comprar</button>
 			</div>
 		</div>
 		
 		<div class="row text-center slideanim" style="margin-bottom: 30px;">
 			<div class="col-sm-6 col-md-6 col-lg-3">
 				<div>
-					<img src="images/samsung.jpg" alt="" width="70%" height="300" class="img-responsive fit-image">
+					<img src="./images/samsung.jpg" alt="" width="70%" height="300" class="img-responsive fit-image">
 				</div>
 			</div>
 			<div style="text-align: left;">
 				<p>Samsung</p>
 				<p>Samsung Galaxy S10e 128 GB prism white 6 GB RAM</p>
 				<p>$7779 pesos</p>
+				<button onclick="agregaCarrito()">Comprar</button>
 			</div>
 		</div>
 
 		<div class="row text-center slideanim" style="margin-bottom: 30px;">
 			<div class="col-sm-6 col-md-6 col-lg-3">
 				<div>
-					<img src="images/iphone.jpg" alt="" width="70%" height="300" class="img-responsive fit-image">
+					<img src="./images/iphone.jpg" alt="" width="70%" height="300" class="img-responsive fit-image">
 				</div>
 			</div>
 			<div style="text-align: left;">
 				<p>Iphone</p>
 				<p>Apple iPhone 11 (128 GB) - Blanco</p>
 				<p>$16,999 pesos</p>
+				<button onclick="agregaCarrito()">Comprar</button>
 			</div>
 		</div>
 
 		<div class="row text-center slideanim" style="margin-bottom: 30px;">
 			<div class="col-sm-6 col-md-6 col-lg-3">
 				<div>
-					<img src="images/huawei.jpg" alt="" width="70%" height="300" class="img-responsive fit-image">
+					<img src="./images/huawei.jpg" alt="" width="70%" height="300" class="img-responsive fit-image">
 				</div>
 			</div>
 			<div style="text-align: left;">
 				<p>huawei</p>
 				<p>Huawei P40 Lite Dual SIM 128 GB midnight black 6 GB RAM</p>
 				<p>$5,999 pesos</p>
+				<button onclick="agregaCarrito()">Comprar</button>
 			</div>
 		</div>
 	</div>
@@ -182,9 +200,5 @@
      
     </footer>
 	
-	<!--Scrips de jquery y boostrap------------>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
 </body>
 </html>
