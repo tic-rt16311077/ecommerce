@@ -17,7 +17,7 @@ const archivos = [
   './images/banner2.jpg',
   './images/banner3.jpg',
   './images/banner4.jpg',
-  './manifest.json'];
+  ];
 
 
 self.addEventListener('install', event=>{
