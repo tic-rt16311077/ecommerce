@@ -2,7 +2,7 @@
     "short_name": "TiendaCell",
     "name": "TiendaCell",
     "start_url": "/index.html?launcher=true",
-    "scope": "/",
+    "scope": ".",
     "background_color": "#0598EC", 
     "theme_color": "#0598EC", 
     "orientation": "portrait", 
