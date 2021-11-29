@@ -17,6 +17,7 @@ const archivos = [
   './images/banner2.jpg',
   './images/banner3.jpg',
   './images/banner4.jpg',
+  './images/favicon'
   ];
 
 
@@ -27,8 +28,8 @@ self.addEventListener('install', event=>{
 
   const cacheInmutable = caches.open(CACHE_INMUTABLE).then(cache =>{
       return cache.addAll([
-          "http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css",
-          "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+          "https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css",
+          "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
       ]) 
   })
   event.waitUntil(cacheAppShell);
