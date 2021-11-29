@@ -9,17 +9,17 @@
     "display": "fullscreen",
     "icons": [
       {
-        "src": "images/favicon48.png",
+        "src": "./images/favicon48.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "images/favicon96.png",
+        "src": "./images/favicon96.png",
         "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "images/favicon192.png",
+        "src": "./images/favicon192.png",
         "type": "image/png",
         "sizes": "192x192"
       }
