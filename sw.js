@@ -7,9 +7,6 @@ var archivosCache = [
   '/carrito.html',
   '/registro.html',
   '/css/estilos.css',
-  '/js/app.js',
-  '/js/jquery.js',
-  '/js/funciones.js',
   '/images/banner1.jpg',
   '/images/banner2.jpg',
   '/images/banner3.jpg',
@@ -34,7 +31,7 @@ self.addEventListener('install', event=>{
   var cacheInmutable = caches.open(CACHE_INMUTABLE).then(cache =>{
       return cache.addAll([
         "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      ]) 
+      ]); 
   })
   event.waitUntil(cacheAppShell);
   self.skipWaiting();
