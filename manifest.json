@@ -11,6 +11,11 @@
                 "src": "/images/favicon96.png",
                 "type": "image/png",
                 "sizes": "96x96"
+              },
+              {
+                "src": "/images/favicon144.png",
+                "type": "image/png",
+                "sizes": "144x144"
               }
             ],
     "start_url": "/index.html",
