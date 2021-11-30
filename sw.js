@@ -19,7 +19,9 @@ var archivosCache = [
   '/images/moto.jpg',
   '/images/samsung.jpg',
   '/images/huawei.jpg',
-  '/images/iphone.jpg'
+  '/images/iphone.jpg',
+  '/js/funciones.js',
+  '/js/app.js'
   ];
 
 self.addEventListener('install', event=>{
@@ -33,7 +35,8 @@ self.addEventListener('install', event=>{
       "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
       "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", 
       "https://code.jquery.com/jquery-3.3.1.slim.min.js", 
-      "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+      "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0"
       
       ]) 
   })
