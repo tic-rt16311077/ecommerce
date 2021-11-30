@@ -15,7 +15,6 @@ var archivosCache = [
   '/images/favicon.png',
   '/images/favicon48.png',
   '/images/favicon96.png',
-  '/images/favicon192.png',
   '/images/logo1.jpg',
   '/images/moto.jpg',
   '/images/samsung.jpg',
