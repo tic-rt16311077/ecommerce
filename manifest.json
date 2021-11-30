@@ -18,10 +18,10 @@
                 "sizes": "192x192"
               }
             ],
-            "start_url": "/index.html",
-            "scope": "/",
-            "background_color": "#0598EC", 
-            "theme_color": "#0598EC", 
-            "orientation": "portrait", 
-            "display": "fullscreen"
+    "start_url": "/index.html",
+    "scope": "/",
+    "background_color": "#0598EC", 
+    "theme_color": "#0598EC", 
+    "orientation": "portrait", 
+    "display": "fullscreen"
 }

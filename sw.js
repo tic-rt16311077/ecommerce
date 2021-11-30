@@ -60,11 +60,7 @@ function borrarCache(){
   )
 };
 
-
-
-
 self.addEventListener('fetch', event => {
-  //console.log(event.request.url)
   event.respondWith(caches.match(event.request).then(res => {
           if (res) return res;
           else{
@@ -75,7 +71,6 @@ self.addEventListener('fetch', event => {
                       borrarCache();
                   });
               });
-//              return nuevoElemento.clone();
           }
       })
       .catch(error => {
