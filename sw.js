@@ -29,8 +29,13 @@ self.addEventListener('install', event=>{
 
   var cacheInmutable = caches.open(CACHE_INMUTABLE).then(cache =>{
       return cache.addAll([
-        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      ]); 
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+      "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", 
+      "https://code.jquery.com/jquery-3.3.1.slim.min.js", 
+      "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+      
+      ]) 
   })
   event.waitUntil(cacheAppShell);
   self.skipWaiting();
