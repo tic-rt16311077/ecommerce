@@ -1,28 +1,27 @@
 {
     "short_name": "TiendaCell",
     "name": "TiendaCell",
-    "start_url": "./index.html",
-    "scope": ".",
-    "background_color": "#0598EC", 
-    "theme_color": "#0598EC", 
-    "orientation": "portrait", 
-    "display": "fullscreen",
     "icons": [
               {
-                "src": "images/favicon48.png",
+                "src": "/images/favicon48.png",
                 "type": "image/png",
                 "sizes": "48x48"
               },
               {
-                "src": "images/favicon96.png",
+                "src": "/images/favicon96.png",
                 "type": "image/png",
                 "sizes": "96x96"
               },
               {
-                "src": "images/favicon192.png",
+                "src": "/images/favicon192.png",
                 "type": "image/png",
                 "sizes": "192x192"
               }
-            ]
-    
+            ],
+            "start_url": "/index.html",
+            "scope": "/",
+            "background_color": "#0598EC", 
+            "theme_color": "#0598EC", 
+            "orientation": "portrait", 
+            "display": "fullscreen"
 }
