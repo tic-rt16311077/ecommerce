@@ -2,22 +2,21 @@ const CACHE_APP_SHELL = 'mi-app-shellV1';
 const CACHE_DINAMICO = 'cache_dinamicoV1';
 const CACHE_INMUTABLE = 'cache_inmutableV1';
 const archivos = [
-  './',
-  './index.html',
-  './carrito.html',
-  './css/estilos.css',
-  './js/app.js',
-  './js/jquery.js',
-  './images/logo1.jpg',
-  './images/moto.jpg',
-  './images/samsung.jpg',
-  './images/huawei.jpg',
-  './images/iphone.jpg',
-  './images/banner1.jpg',
-  './images/banner2.jpg',
-  './images/banner3.jpg',
-  './images/banner4.jpg',
-  './images/favicon'
+  '/',
+  '/index.html',
+  '/carrito.html',
+  '/css/estilos.css',
+  '/js/app.js',
+  '/js/jquery.js',
+  '/images/logo1.jpg',
+  '/images/moto.jpg',
+  '/images/samsung.jpg',
+  '/images/huawei.jpg',
+  '/images/iphone.jpg',
+  '/images/banner1.jpg',
+  '/images/banner2.jpg',
+  '/images/banner3.jpg',
+  '/images/banner4.jpg'
   ];
 
 
