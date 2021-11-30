@@ -1,31 +1,37 @@
-const CACHE_APP_SHELL = 'mi-app-shellV1';
-const CACHE_DINAMICO = 'cache_dinamicoV1';
-const CACHE_INMUTABLE = 'cache_inmutableV1';
-const archivos = [
+var CACHE_APP_SHELL = 'mi-app-shellV1';
+var CACHE_DINAMICO = 'cache_dinamicoV1';
+var CACHE_INMUTABLE = 'cache_inmutableV1';
+var archivosCache = [
   '/',
   '/index.html',
   '/carrito.html',
+  '/registro.html',
   '/css/estilos.css',
   '/js/app.js',
   '/js/jquery.js',
+  '/js/funciones.js',
+  '/images/banner1.jpg',
+  '/images/banner2.jpg',
+  '/images/banner3.jpg',
+  '/images/banner4.jpg',
+  '/images/carrito.png',
+  '/images/favicon.png',
+  '/images/favicon48.png',
+  '/images/favicon96.png',
+  '/images/favicon192.png',
   '/images/logo1.jpg',
   '/images/moto.jpg',
   '/images/samsung.jpg',
   '/images/huawei.jpg',
-  '/images/iphone.jpg',
-  '/images/banner1.jpg',
-  '/images/banner2.jpg',
-  '/images/banner3.jpg',
-  '/images/banner4.jpg'
+  '/images/iphone.jpg'
   ];
 
-
 self.addEventListener('install', event=>{
-  const cacheAppShell = caches.open(CACHE_APP_SHELL).then(cache => {
-      return cache.addAll(archivos);
+  var cacheAppShell = caches.open(CACHE_APP_SHELL).then(cache => {
+      return cache.addAll(archivosCache);
     })
 
-  const cacheInmutable = caches.open(CACHE_INMUTABLE).then(cache =>{
+  var cacheInmutable = caches.open(CACHE_INMUTABLE).then(cache =>{
       return cache.addAll([
           "https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css",
           "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
