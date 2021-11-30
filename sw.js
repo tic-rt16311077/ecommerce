@@ -33,8 +33,7 @@ self.addEventListener('install', event=>{
 
   var cacheInmutable = caches.open(CACHE_INMUTABLE).then(cache =>{
       return cache.addAll([
-          "https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css",
-          "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       ]) 
   })
   event.waitUntil(cacheAppShell);
